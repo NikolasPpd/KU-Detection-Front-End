@@ -13,3 +13,14 @@ export interface Commit {
   timestamp: string;
   file_changes: FileChange[];
 }
+
+export interface AnalysisResult {
+  filename: string;
+  author: string;
+  timestamp: string;
+  sha: string;
+  detected_kus: {
+    [key: string]: number;
+  };
+  elapsed_time: number;
+}

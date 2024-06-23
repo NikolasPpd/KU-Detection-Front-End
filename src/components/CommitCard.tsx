@@ -17,7 +17,7 @@ const CommitCard: React.FC<CommitCardProps> = ({ commit }) => {
           src={`https://github.com/${commit.author}.png`}
           alt={commit.author}
         />
-        <AvatarFallback>USER</AvatarFallback>
+        <AvatarFallback>{commit.author.slice(0, 2)}</AvatarFallback>
       </Avatar>
       <div className="flex-grow">
         <p className="text-sm font-medium">{commit.sha}</p>
